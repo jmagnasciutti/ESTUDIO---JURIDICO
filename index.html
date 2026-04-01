@@ -3,84 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LexScout | Estudio Jurídico Tecnológico</title>
+    <title>LexScout | Innovación Jurídica</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --primary: #1a2a44;
             --secondary: #c5a059;
-            --light: #f4f4f4;
-            --dark: #333;
+            --light: #f8f9fa;
+            --dark: #212529;
             --whatsapp: #25d366;
-            --whatsapp-alt: #075e54;
         }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--dark); line-height: 1.6; }
         
-        /* CABECERA Y HERO */
-        header { background: var(--primary); color: white; padding: 2rem 5%; text-align: center; }
-        .hero { background: linear-gradient(rgba(26,42,68,0.85), rgba(26,42,68,0.85)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); 
-                height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; background-size: cover; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 0.5rem; letter-spacing: 2px; }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin-bottom: 2rem; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; color: var(--dark); line-height: 1.6; scroll-behavior: smooth; }
 
-        /* ESTILO BOTONES FLOTANTES CON ETIQUETAS */
-        .wa-container {
-            position: fixed;
-            right: 30px;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(rgba(26,42,68,0.8), rgba(26,42,68,0.8)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1350&q=80'); 
+            height: 80vh; display: flex; flex-direction: column; justify-content: center; 
+            align-items: center; color: white; text-align: center; background-size: cover; background-position: center;
         }
-        .wa-container:hover { transform: scale(1.05); }
+        .hero h1 { font-size: 4rem; margin-bottom: 0.5rem; letter-spacing: 3px; }
+        .hero p { font-size: 1.3rem; max-width: 700px; margin-bottom: 2rem; padding: 0 20px; }
         
-        .wa-button {
-            width: 60px;
-            height: 60px;
-            color: #FFF;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        .cta-button { 
+            background: var(--secondary); color: white; padding: 1.2rem 2.5rem; 
+            text-decoration: none; border-radius: 50px; font-weight: bold; 
+            transition: 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
-        
-        .wa-label {
-            background: white;
-            color: var(--dark);
-            padding: 8px 15px;
-            border-radius: 20px;
-            margin-right: 15px;
-            font-weight: bold;
-            font-size: 14px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            white-space: nowrap;
-        }
+        .cta-button:hover { background: #b08d4a; transform: translateY(-3px); }
 
-        /* POSICIONES */
-        .wa-martinez { bottom: 30px; }
-        .wa-magnasciutti { bottom: 105px; }
-        
-        /* COLORES */
-        .bg-martinez { background-color: var(--whatsapp); }
-        .bg-magnasciutti { background-color: var(--whatsapp-alt); }
+        /* SECCIÓN QUÉ HACEMOS */
+        .about { padding: 5rem 10%; text-align: center; background: white; }
+        .about h2 { color: var(--primary); font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .about p { font-size: 1.1rem; color: #555; max-width: 800px; margin: 0 auto; }
 
-        /* SECCIONES */
-        .services { padding: 5rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; background: var(--light); }
-        .service-card { background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-top: 5px solid var(--secondary); text-align: center; }
-        .service-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
-        .cta-button { background: var(--secondary); color: white; padding: 1.2rem 2.5rem; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.1rem; }
-        footer { background: var(--primary); color: white; text-align: center; padding: 3rem; }
+        /* RECURSOS ÚTILES (ENLACES) */
+        .resources { padding: 4rem 10%; background: var(--light); text-align: center; }
+        .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .resource-link { 
+            background: white; padding: 1.5rem; border-radius: 10px; text-decoration: none; 
+            color: var(--primary); font-weight: bold; border: 1px solid #ddd; transition: 0.3s;
+        }
+        .resource-link:hover { border-color: var(--secondary); background: #fffdf9; color: var(--secondary); }
+
+        /* BOTONES WHATSAPP FLOTANTES */
+        .wa-float-container { position: fixed; right: 20px; bottom: 20px; z-index: 1000; display: flex; flex-direction: column; gap: 15px; }
+        .wa-btn { 
+            display: flex; align-items: center; background: var(--whatsapp); color: white; 
+            padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.3s;
+        }
+        .wa-btn i { font-size: 1.5rem; margin-left: 10px; }
+        .wa-btn:hover { transform: translateX(-10px); background: #128c7e; }
+        .wa-dr-m { background: #075e54; } /* Color distinto para diferenciar */
+
+        footer { background: var(--primary); color: white; padding: 3rem 10%; text-align: center; }
     </style>
 </head>
 <body>
 
     <section class="hero">
         <h1>LexScout</h1>
-        <p>Innovación jurídica y vigilancia inteligente de causas en tiempo real.</p>
+        <p>El estudio jurídico que fusiona la excelencia del derecho con la vigilancia inteligente de causas.</p>
         <a href="#contacto" class="cta-button">Iniciar Consulta</a>
     </section>
 
-    <a href="
+    <section class="about">
+        <h2>Nuestra Propuesta</h2>
+        <p>No solo defendemos sus intereses; los vigilamos. En LexScout integramos tecnología propia para monitorear expedientes en el PJN en tiempo real, garantizando que ninguna novedad pase inadvertida. Brindamos transparencia, agilidad y una estrategia legal de vanguardia en la Ciudad Autónoma de Buenos Aires y jurisdicciones federales.</p>
+    </section>
+
+    <section class="resources">
+        <h3>Recursos y Legislación Nacional</h3>
+        <div class="resource-grid">
+            <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/235975/norma.htm" class="resource-link" target="_blank">Código Civil y Comercial</a>
+            <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/804/norma.htm" class="resource-link" target="_blank">Constitución Nacional</a>
+            <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/16544/norma.htm" class="resource-link" target="_blank">Código Procesal Civil</a>
+            <a href="https://www.pjn.gov.ar/" class="resource-link" target="_blank">Portal PJN</a>
+        </div>
+    </section>
+
+    <div class="wa-float-container" id="contacto">
+        <a href="https://wa.me/5491154843348" class="wa-btn" target="_blank">Dr. Magnasciutti <i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/5491166227912" class="wa-btn wa-dr-m" target="_blank">Dr. Martinez <i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <footer>
+        <p><strong>LexScout Estudio Jurídico | Argentina</strong></p>
+        <p>Consultas: lexscoutestudio@gmail.com</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">© 2026 Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
