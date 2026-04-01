@@ -11,6 +11,7 @@
             --secondary: #c5a059;
             --light: #f4f4f4;
             --dark: #333;
+            --whatsapp: #25d366;
         }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--dark); line-height: 1.6; }
         header { background: var(--primary); color: white; padding: 2rem 5%; text-align: center; }
@@ -20,6 +21,32 @@
         .services { padding: 4rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; background: var(--light); }
         .service-card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); border-top: 4px solid var(--secondary); }
         .cta-button { background: var(--secondary); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 1rem; display: inline-block; }
+        
+        /* ESTILO DEL BOTÓN DE WHATSAPP */
+        .btn-whatsapp {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+            transform: scale(1.1);
+        }
+        
         footer { background: var(--dark); color: white; text-align: center; padding: 2rem; }
     </style>
 </head>
@@ -31,13 +58,17 @@
         <a href="#contacto" class="cta-button">Consulta Gratuita</a>
     </section>
 
+    <a href="https://wa.me/TU_NUMERO_AQUI?text=Hola,%20deseo%20realizar%20una%20consulta%20legal." class="btn-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
     <section class="services">
         <div class="service-card">
             <h3><i class="fas fa-microchip"></i> Legal Tech</h3>
             <p>Utilizamos sistemas propios de vigilancia judicial para que su causa nunca pierda impulso.</p>
         </div>
         <div class="service-card">
-            <h3><i class="fas fa-balance-scale"></i> Litigios en Argentina</h3>
+            <h3><i class="fas fa-balance-scale"></i> Litigios</h3>
             <p>Estrategias sólidas en fueros civiles, comerciales y laborales con alcance nacional.</p>
         </div>
         <div class="service-card">
@@ -48,7 +79,6 @@
 
     <footer id="contacto">
         <p>LexScout Estudio Jurídico | Argentina</p>
-        <p><i class="fab fa-whatsapp"></i> +54 9 11 XXXX-XXXX</p>
         <p>lexscoutestudio@gmail.com</p>
     </footer>
 
