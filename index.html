@@ -23,16 +23,14 @@
             line-height: 1.6; 
             scroll-behavior: smooth; 
             background-color: var(--white); 
-            padding-top: 70px; /* Espacio para el header fijo */
+            padding-top: 70px; 
         }
 
-        /* ANIMACIONES */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* HEADER FIJO */
         header {
             position: fixed;
             top: 0;
@@ -54,7 +52,6 @@
         }
         header .nav-btn:hover { background: var(--primary); color: white; }
 
-        /* HERO SECTION */
         .hero { 
             background: linear-gradient(rgba(26, 42, 68, 0.85), rgba(26, 42, 68, 0.85)), 
                         url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1350&q=80'); 
@@ -81,32 +78,27 @@
         }
         .cta-button:hover { background: #b08d4a; transform: translateY(-3px); }
 
-        /* SECCIONES GENERALES */
         section { padding: 5rem 10%; text-align: center; }
         h2 { color: var(--primary); font-size: 2.2rem; margin-bottom: 2rem; position: relative; padding-bottom: 15px; }
         h2::after { content: ''; width: 50px; height: 3px; background: var(--secondary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-        /* EQUIPO */
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 3rem; }
         .team-card { background: var(--light); padding: 30px; border-radius: 8px; transition: 0.3s; }
         .team-card i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
         .team-card h3 { margin: 10px 0; color: var(--primary); }
         .team-card p { font-size: 0.9rem; color: #666; }
 
-        /* SERVICIOS */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .service-box { background: var(--light); padding: 30px; border-radius: 8px; text-align: center; border-bottom: 4px solid var(--primary); transition: 0.3s; }
         .service-box i { font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; }
         .service-box h3 { text-transform: uppercase; letter-spacing: 2px; font-size: 1.1rem; color: var(--primary); }
 
-        /* FAQ */
         .faq-section { background: var(--light); }
         .faq-container { max-width: 800px; margin: 0 auto; text-align: left; }
         .faq-item { margin-bottom: 1.5rem; background: var(--white); padding: 20px; border-radius: 5px; border-left: 4px solid var(--secondary); }
         .faq-item h4 { margin: 0 0 10px 0; color: var(--primary); }
         .faq-item p { margin: 0; font-size: 0.95rem; color: #555; }
 
-        /* RECURSOS GLASSMORPHISM */
         .resources { background: var(--white); }
         .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
         .resource-link { 
@@ -117,7 +109,6 @@
         }
         .resource-link:hover { border-color: var(--secondary); color: var(--secondary); transform: translateY(-3px); }
 
-        /* WHATSAPP FLOTANTES */
         .wa-float-container { position: fixed; right: 25px; bottom: 25px; z-index: 1000; display: flex; flex-direction: column; gap: 12px; }
         .wa-btn { 
             display: flex; align-items: center; background: var(--whatsapp); color: white; 
@@ -125,13 +116,14 @@
             box-shadow: 0 6px 12px rgba(0,0,0,0.2); transition: 0.4s; font-size: 13px;
         }
         .wa-dr-m { background: #075e54; }
+        .wa-btn i { margin-left: 10px; font-size: 1.2rem; }
         .wa-btn:hover { transform: scale(1.05); }
 
         footer { background: var(--primary); color: white; padding: 3rem 10%; text-align: center; }
 
         @media (max-width: 768px) {
             header { padding: 0 5%; }
-            header .nav-btn { display: none; } /* Ocultar en móviles para no saturar */
+            header .nav-btn { display: none; }
             section { padding: 4rem 5%; }
         }
     </style>
@@ -209,7 +201,7 @@
             </div>
             <div class="faq-item">
                 <h4>¿Atienden casos en todo el país?</h4>
-                <p>Nuestra base principal es CABA y Federal, pero asesoramos y litigamos en causas de alcance nacional gracias a nuestra infraestructura digital.</p>
+                <p>Nuestra base principal es Ciudad Autónoma de Buenos Aires y Provincia de Buenos Aires.</p>
             </div>
         </div>
     </section>
@@ -225,10 +217,10 @@
 
     <div class="wa-float-container" id="contacto">
         <a href="https://wa.me/5491154843348?text=Hola%20Dr.%20Magnasciutti,%20vengo%20desde%20la%20web%20LexScout." class="wa-btn" target="_blank">
-            Dr. Magnasciutti <i class="fab fa-whatsapp" style="margin-left:10px"></i>
+            Dr. Magnasciutti <i class="fab fa-whatsapp"></i>
         </a>
         <a href="https://wa.me/5491166227912?text=Hola%20Dr.%20Martínez,%20vengo%20desde%20la%20web%20LexScout." class="wa-btn wa-dr-m" target="_blank">
-            Dr. Pablo E. Martínez <i class="fab fa-whatsapp" style="margin-left:10px"></i>
+            Dr. Pablo E. Martínez <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
