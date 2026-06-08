@@ -84,6 +84,18 @@
 
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 3rem; }
         .team-card { background: var(--light); padding: 30px; border-radius: 8px; transition: 0.3s; }
+        
+        /* Estilos agregados para las imágenes del equipo */
+        .team-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid var(--secondary);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        
         .team-card i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
         .team-card h3 { margin: 10px 0; color: var(--primary); }
         .team-card p { font-size: 0.9rem; color: #666; }
@@ -146,7 +158,7 @@
     <section id="about">
         <h2>Vigilancia Judicial Activa</h2>
         <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #444;">
-            No esperamos la notificación oficial. Implementamos algoritmos de seguimiento sobre el PJN para detectar movimientos en sus causas al instante, permitiéndonos actuar con una ventaja estratégica inalcanzable para el derecho tradicional.
+            No esperamos la notificación oficial. Implementamos algoritmos de seguimiento sobre el PJN para detectar movements en sus causas al instante, permitiéndonos actuar con una ventaja estratégica inalcanzable para el derecho tradicional.
         </p>
     </section>
 
@@ -154,7 +166,7 @@
         <h2>Nuestro Equipo</h2>
         <div class="team-grid">
             <div class="team-card">
-                <i class="fas fa-user-tie"></i>
+                <img src="jose-magnasciutti.jpg" alt="Dr. José L. Magnasciutti" class="team-img">
                 <h3>Dr. José L. Magnasciutti</h3>
                 <p>Especialista en Derecho Civil y Litigios. Liderazgo en estrategia y vigilancia tecnológica.</p>
             </div>
@@ -203,23 +215,23 @@
                 <p>Nuestra base principal es Ciudad Autónoma de Buenos Aires y Provincia de Buenos Aires.</p>
             </div>
         </div>
-    <section class="resources">
-    <h3>Biblioteca y Enlaces Útiles</h3>
-    <div class="resource-grid">
-        <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/235975/norma.htm" class="resource-link" target="_blank" rel="noopener noreferrer">Cód. Civil y Comercial</a>
-        <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/804/norma.htm" class="resource-link" target="_blank" rel="noopener noreferrer">Const. Nacional</a>
-        <a href="https://www.cpacf.org.ar/" class="resource-link" target="_blank" rel="noopener noreferrer">CPACF Oficial</a>
-    </div>
-</section>
+    </section> <section class="resources">
+        <h3>Biblioteca y Enlaces Útiles</h3>
+        <div class="resource-grid">
+            <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/235975/norma.htm" class="resource-link" target="_blank" rel="noopener noreferrer">Cód. Civil y Comercial</a>
+            <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/0-4999/804/norma.htm" class="resource-link" target="_blank" rel="noopener noreferrer">Const. Nacional</a>
+            <a href="https://www.cpacf.org.ar/" class="resource-link" target="_blank" rel="noopener noreferrer">CPACF Oficial</a>
+        </div>
+    </section>
 
-   <div class="wa-float-container" id="contacto">
-    <a href="https://wa.me/5491154843348?text=Hola%20Dr.%20Magnasciutti,%20vengo%20desde%20la%20web%20LexScout." class="wa-btn" target="_blank" rel="noopener noreferrer">
-        Dr. José L. Magnasciutti <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://wa.me/5491166227912?text=Hola%20Dr.%20Martínez,%20vengo%20desde%20la%20web%20LexScout." class="wa-btn wa-dr-m" target="_blank" rel="noopener noreferrer">
-        Dr. Pablo E. Martínez <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
+    <div class="wa-float-container" id="contacto">
+        <a href="https://wa.me/5491154843348?text=Hola%20Dr.%20Magnasciutti,%20vengo%20desde%20la%20web%20LexScout." class="wa-btn" target="_blank" rel="noopener noreferrer">
+            Dr. José L. Magnasciutti <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://wa.me/5491166227912?text=Hola%20Dr.%20Martínez,%20vengo%20desde%20la%20web%20LexScout." class="wa-btn wa-dr-m" target="_blank" rel="noopener noreferrer">
+            Dr. Pablo E. Martínez <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
 
     <footer>
         <p>&copy; 2026 LexScout | Innovación Jurídica aplicada al PJN.</p>
