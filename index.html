@@ -85,7 +85,6 @@
         .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 3rem; }
         .team-card { background: var(--light); padding: 30px; border-radius: 8px; transition: 0.3s; }
         
-        /* Estilos agregados para las imágenes del equipo */
         .team-img {
             width: 130px;
             height: 130px;
@@ -110,6 +109,52 @@
         .faq-item { margin-bottom: 1.5rem; background: var(--white); padding: 20px; border-radius: 5px; border-left: 4px solid var(--secondary); }
         .faq-item h4 { margin: 0 0 10px 0; color: var(--primary); }
         .faq-item p { margin: 0; font-size: 0.95rem; color: #555; }
+
+        /* ========================================================
+           NUEVOS ESTILOS PARA LOS INSTRUCTIVOS DE CLIENTES 
+           ======================================================== */
+        .instructivos-section { background: var(--light); }
+        .instructivos-container { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 30px; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+        }
+        .instructivo-card { 
+            background: var(--white); 
+            padding: 30px; 
+            border-radius: 8px; 
+            width: 45%; 
+            min-width: 290px; 
+            text-align: left; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            border-top: 4px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .instructivo-card h3 { color: var(--primary); margin: 0 0 12px 0; font-size: 1.3rem; }
+        .instructivo-card p { font-size: 0.95rem; color: #555; margin: 0 0 25px 0; }
+        
+        .btn-legal { 
+            display: block; 
+            text-align: center; 
+            padding: 12px; 
+            text-decoration: none; 
+            font-weight: 700; 
+            border-radius: 4px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+        .btn-autorizar { background: var(--primary); color: white; border: 1px solid var(--primary); }
+        .btn-autorizar:hover { background: #111b2c; transform: translateY(-2px); }
+        .btn-firmar { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-firmar:hover { background: var(--primary); color: white; transform: translateY(-2px); }
+        /* ======================================================== */
 
         .resources { background: var(--white); }
         .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
@@ -137,6 +182,7 @@
             header { padding: 0 5%; }
             header .nav-btn { display: none; }
             section { padding: 4rem 5%; }
+            .instructivo-card { width: 100%; }
         }
     </style>
 </head>
@@ -145,6 +191,7 @@
     <header>
         <a href="#" class="logo">LEXSCOUT</a>
         <div class="nav-contact">
+            <a href="#instructivos" class="nav-btn" style="margin-right: 10px; border-color: var(--secondary); color: var(--secondary);">Trámites</a>
             <a href="#faq" class="nav-btn">Preguntas</a>
         </div>
     </header>
@@ -158,7 +205,7 @@
     <section id="about">
         <h2>Vigilancia Judicial Activa</h2>
         <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #444;">
-            No esperamos la notificación oficial. Implementamos algoritmos de seguimiento sobre el PJN para detectar movements en sus causas al instante, permitiéndonos actuar con una ventaja estratégica inalcanzable para el derecho tradicional.
+            No esperamos la notificación oficial. Implementamos algoritmos de seguimiento sobre el PJN para detectar movimientos en sus causas al instante, permitiéndonos actuar con una ventaja estratégica inalcanzable para el derecho tradicional.
         </p>
     </section>
 
@@ -215,7 +262,31 @@
                 <p>Nuestra base principal es Ciudad Autónoma de Buenos Aires y Provincia de Buenos Aires.</p>
             </div>
         </div>
-    </section> <section class="resources">
+    </section>
+
+    <section id="instructivos" class="instructivos-section">
+        <h2>Trámites y Guías para Clientes</h2>
+        <p style="max-width: 600px; margin: -1rem auto 3rem auto; color: #666;">Seleccione el instructivo correspondiente para completar la gestión asignada por su letrado.</p>
+        <div class="instructivos-container">
+            <div class="instructivo-card">
+                <h3>Autorización ARCA (ex-AFIP)</h3>
+                <p>Consulte el paso a paso para delegar el Domicilio Fiscal Electrónico y gestionar las notificaciones obligatorias de su causa de mediación de manera segura.</p>
+                <a href="/static/pdf/AUTORIZAR_AL_ABOGADO_EN_ARCA.pdf" target="_blank" class="btn-legal btn-autorizar">
+                    <i class="fas fa-user-check"></i> AUTORIZAR
+                </a>
+            </div>
+
+            <div class="instructivo-card">
+                <h3>Firma de Actas de Mediación</h3>
+                <p>Acceda a la guía detallada para ingresar con su Clave Fiscal a la plataforma oficial de audiencias y firmar electrónicamente el acta de cierre.</p>
+                <a href="/static/pdf/FIRMAR_EL_ACTA_DE_MEDIACION.pdf" target="_blank" class="btn-legal btn-firmar">
+                    <i class="fas fa-pen-nib"></i> FIRMAR
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources">
         <h3>Biblioteca y Enlaces Útiles</h3>
         <div class="resource-grid">
             <a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/235000-239999/235975/norma.htm" class="resource-link" target="_blank" rel="noopener noreferrer">Cód. Civil y Comercial</a>
@@ -232,24 +303,6 @@
             Dr. Pablo E. Martínez <i class="fab fa-whatsapp"></i>
         </a>
     </div>
-
-    <div class="instructivos-container">
-    <div class="instructivo-card">
-        <h3>Autorización ARCA (ex-AFIP)</h3>
-        <p>Consulte el paso a paso para delegar el Domicilio Fiscal Electrónico y gestionar las notificaciones obligatorias de su causa.</p>
-        <a href="/static/pdf/AUTORIZAR_AL_ABOGADO_EN_ARCA.pdf" target="_blank" class="btn-legal btn-autorizar">
-            <i class="fas fa-user-check"></i> AUTORIZAR
-        </a>
-    </div>
-
-    <div class="instructivo-card">
-        <h3>Firma de Actas de Mediación</h3>
-        <p>Acceda a la guía detallada para ingresar con su Clave Fiscal a la plataforma oficial y firmar electrónicamente el acta de audiencia.</p>
-        <a href="/static/pdf/FIRMAR_EL_ACTA_DE_MEDIACION.pdf" target="_blank" class="btn-legal btn-firmar">
-            <i class="fas fa-pen-nib"></i> FIRMAR
-        </a>
-    </div>
-</div>
 
     <footer>
         <p>&copy; 2026 LexScout | Innovación Jurídica aplicada al PJN.</p>
