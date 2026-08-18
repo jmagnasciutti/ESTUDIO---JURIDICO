@@ -90,9 +90,10 @@
             height: 130px;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 15px;
+            margin: 0 auto 15px auto;
             border: 3px solid var(--secondary);
             box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            display: block;
         }
         
         .team-card i { font-size: 3rem; color: var(--primary); margin-bottom: 15px; }
@@ -110,9 +111,6 @@
         .faq-item h4 { margin: 0 0 10px 0; color: var(--primary); }
         .faq-item p { margin: 0; font-size: 0.95rem; color: #555; }
 
-        /* ========================================================
-           NUEVOS ESTILOS PARA LOS INSTRUCTIVOS DE CLIENTES 
-           ======================================================== */
         .instructivos-section { background: var(--light); }
         .instructivos-container { 
             display: flex; 
@@ -147,14 +145,13 @@
             border-radius: 4px; 
             text-transform: uppercase; 
             letter-spacing: 1px; 
-            font-size: 0.95rem;
+            font-size: 0.95rem; 
             transition: 0.3s;
         }
         .btn-autorizar { background: var(--primary); color: white; border: 1px solid var(--primary); }
         .btn-autorizar:hover { background: #111b2c; transform: translateY(-2px); }
         .btn-firmar { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
         .btn-firmar:hover { background: var(--primary); color: white; transform: translateY(-2px); }
-        /* ======================================================== */
 
         .resources { background: var(--white); }
         .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
@@ -180,7 +177,7 @@
 
         @media (max-width: 768px) {
             header { padding: 0 5%; }
-            header .nav-btn { display: none; }
+            header .nav-btn:not(.btn-panel) { display: none; }
             section { padding: 4rem 5%; }
             .instructivo-card { width: 100%; }
         }
@@ -193,7 +190,7 @@
         <div class="nav-contact">
             <a href="#instructivos" class="nav-btn" style="margin-right: 10px; border-color: var(--secondary); color: var(--secondary);">Trámites</a>
             <a href="#faq" class="nav-btn">Preguntas</a>
-            <a href="https://app.lexscout.com.ar" target="_blank" class="nav-btn" style="background: #2563eb; color: #ffffff; border-color: #2563eb;">
+            <a href="https://app.lexscout.com.ar" target="_blank" class="nav-btn btn-panel" style="background: #2563eb; color: #ffffff; border-color: #2563eb;">
                 <i class="fas fa-lock" style="margin-right: 5px;"></i> Acceso Estudio
             </a>
         </div>
@@ -221,7 +218,7 @@
                 <p>Especialista en Derecho Civil y Litigios. Liderazgo en estrategia y vigilancia tecnológica.</p>
             </div>
             <div class="team-card">
-               <img src="Pablo.jpeg" alt="Dr. Pablo E. Martínez" class="team-img">
+                <img src="Pablo.jpeg" alt="Dr. Pablo E. Martínez" class="team-img">
                 <h3>Dr. Pablo E. Martínez</h3>
                 <p>Experto en Derecho Civil, Comercial y Daños. Consultoría preventiva y resolución de conflictos complejos.</p>
             </div>
