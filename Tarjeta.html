@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. José Luis Magnasciutti Ferraz | LexScout</title>
 
-    <!-- Metadatos Open Graph para que la imagen LEX.jpg sea la miniatura gigante en WhatsApp -->
-    <meta property="og:title" content="Dr. José Luis Magnasciutti Ferraz | LexScout">
-    <meta property="og:description" content="Estudio Jurídico & Legal Tech. Toca aquí para ver los canales de contacto directos.">
+    <!-- Metadatos de Vista Previa Forzada para WhatsApp -->
+    <meta property="og:site_name" content="LexScout Legal Tech">
+    <meta property="og:title" content="Dr. José Luis Magnasciutti Ferraz | Tarjeta de Presentación">
+    <meta property="og:description" content="Toca para ver los botones de WhatsApp, Email y Sitio Web.">
     <meta property="og:image" content="https://raw.githubusercontent.com/jmagnasciutti/ESTUDIO---JURÍDICO/principal/LEX.jpg">
-    <meta property="og:url" content="https://www.lexscout.com.ar/tarjeta.html">
+    <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/jmagnasciutti/ESTUDIO---JURÍDICO/principal/LEX.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://www.lexscout.com.ar/Tarjeta.html">
     <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. José Luis Magnasciutti Ferraz | LexScout">
+    <meta name="twitter:description" content="Toca para ver los botones de contacto directo.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/jmagnasciutti/ESTUDIO---JURÍDICO/principal/LEX.jpg">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,7 +31,6 @@
         body { background-color: #0f172a; color: #f8fafc; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; }
         .container { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 18px; align-items: center; text-align: center; }
         
-        /* Contenedor principal de la tarjeta de presentación visual */
         .card-brand { 
             width: 100%; 
             border-radius: 16px; 
@@ -36,20 +46,9 @@
             display: block; 
         }
 
-        .info-name {
-            font-size: 16px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-top: 5px;
-        }
-        .info-role {
-            font-size: 12px;
-            color: #38bdf8;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
+        .info-name { font-size: 16px; font-weight: 700; color: #ffffff; margin-top: 5px; }
+        .info-role { font-size: 12px; color: #38bdf8; margin-bottom: 5px; font-weight: 500; }
 
-        /* Botones de Acción Directa */
         .links-list { display: flex; flex-direction: column; gap: 10px; width: 100%; }
         .btn-link { display: flex; align-items: center; justify-content: center; gap: 10px; background-color: #1e293b; color: #fff; padding: 14px; border-radius: 12px; text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid rgba(255,255,255,0.08); transition: background 0.2s; }
         .btn-link:hover { background-color: #334155; }
@@ -60,8 +59,6 @@
 </head>
 <body>
     <div class="container">
-        
-        <!-- Imagen principal del Faro (LEX.jpg) visible en la web -->
         <div class="card-brand">
             <img src="LEX.jpg" alt="LexScout Estudio Jurídico">
         </div>
@@ -69,7 +66,6 @@
         <div class="info-name">Dr. José Luis Magnasciutti Ferraz</div>
         <div class="info-role">Abogado | Co-Founder LexScout</div>
 
-        <!-- Botones de contacto -->
         <div class="links-list">
             <a href="https://wa.me/5491154843348?text=Hola%20José%20Luis,%20vi%20tu%20tarjeta%20digital%20de%20LexScout" class="btn-link btn-whatsapp" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp
